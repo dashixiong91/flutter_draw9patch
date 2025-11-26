@@ -1,2 +1,19 @@
 [tools]
 flutter = "3.27.0-stable"
+
+[tasks.'build:web']
+description = 'Web 编译'
+run = "flutter build web --base-href /flutter_draw9patch/ --no-web-resources-cdn"
+
+[tasks.'publish:web']
+depends = ['build:web']
+run = """
+set -e
+rm -rf docs
+cp -R build/web ./docs
+git add .
+git commit -m "chore: publish web"
+git push
+echo "publish done!"
+"""
+

@@ -28003,7 +28003,7 @@ A.arf.prototype={
 $1(a){var s=A.e1().b
 if(s==null)s=null
 else{s=s.canvasKitBaseUrl
-if(s==null)s=null}return(s==null?"https://www.gstatic.com/flutter-canvaskit/83bacfc52569459a4a654727cad2546820cb0d6a/":s)+a},
+if(s==null)s=null}return(s==null?"canvaskit/":s)+a},
 $S:55}
 A.a_z.prototype={
 dw(){B.c.p(this.a.a.save())},
